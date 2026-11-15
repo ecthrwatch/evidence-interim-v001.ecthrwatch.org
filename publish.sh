@@ -28,7 +28,7 @@ git add -A
 if git diff --cached --quiet; then
     echo "No new changes to commit."
 else
-    git diff --cached --stat
+    git --no-pager diff --cached --stat
     git commit -m "$message"
 fi
 
